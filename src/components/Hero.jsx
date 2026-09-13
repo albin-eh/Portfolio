@@ -2,7 +2,7 @@ import profileImage from '../assets/profile.jpg'
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/albin-rajesh' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/albin-rajesh-44682739b/' },
   { label: 'Email', href: 'mailto:ALBINEDITS1@GMAIL.COM' },
 ]
 
@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a className="button primary" href="https://www.linkedin.com/in/albin-rajesh" target="_blank" rel="noreferrer">
+            <a className="button primary" href="https://www.linkedin.com/in/albin-rajesh-44682739b/" target="_blank" rel="noreferrer">
               CONNECT WITH ME
             </a>
             <a className="button secondary" href="#projects">

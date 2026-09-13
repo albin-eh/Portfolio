@@ -1,6 +1,6 @@
 const footerLinks = [
   { label: 'GitHub', href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/albin-rajesh' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/albin-rajesh-44682739b/' },
   { label: 'Email', href: 'mailto:ALBINEDITS1@GMAIL.COM' },
 ]
 

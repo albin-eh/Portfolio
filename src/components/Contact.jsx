@@ -12,7 +12,7 @@ export default function Contact() {
         </div>
 
         <div className="contact-actions">
-          <a className="button primary" href="https://www.linkedin.com/in/albin-rajesh" target="_blank" rel="noreferrer">
+          <a className="button primary" href="https://www.linkedin.com/in/albin-rajesh-44682739b/" target="_blank" rel="noreferrer">
             LINKEDIN
           </a>
           <a className="button secondary" href="https://github.com" target="_blank" rel="noreferrer">
