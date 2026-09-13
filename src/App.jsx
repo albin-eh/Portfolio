@@ -7,7 +7,6 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
-import ScrollShowcase from './components/ScrollShowcase'
 import Skills from './components/Skills'
 
 function App() {
@@ -57,7 +56,6 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        <ScrollShowcase />
         <Experience />
         <Achievements />
         <Contact />
