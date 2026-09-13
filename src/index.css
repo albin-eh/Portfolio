@@ -386,8 +386,10 @@ p {
   width: 100%;
   min-height: 620px;
   object-fit: cover;
+  object-position: center;
   border-radius: calc(var(--radius-xl) - 8px);
   background: linear-gradient(135deg, #2a3c53, #0f1722);
+  filter: saturate(0.7) contrast(1.08) brightness(0.72) sepia(0.05);
 }
 
 .floating-tag {

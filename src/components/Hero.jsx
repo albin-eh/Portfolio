@@ -1,4 +1,4 @@
-import profileImage from '../assets/profile.svg'
+import profileImage from '../assets/profile.jpg'
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com' },
