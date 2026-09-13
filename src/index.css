@@ -134,6 +134,84 @@ button, input, textarea, select { font: inherit; }
   padding: 6rem 0;
 }
 
+.scroll-showcase {
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.container-scroll {
+  position: relative;
+  height: 60rem;
+  padding: 0.5rem;
+  perspective: 1000px;
+}
+
+.container-scroll-inner {
+  position: relative;
+  width: min(100%, 1200px);
+  height: 100%;
+  margin: 0 auto;
+  padding: 6rem 0 10rem;
+}
+
+.container-scroll-header {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-scroll-header h2 {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.container-scroll-card {
+  position: relative;
+  width: min(100%, 1000px);
+  height: 30rem;
+  margin: -3rem auto 0;
+  padding: 0.5rem;
+  border: 4px solid #6c6c6c;
+  border-radius: 30px;
+  background: #222;
+  transform-origin: top center;
+}
+
+.container-scroll-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #111923;
+}
+
+.scroll-showcase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: saturate(0.75) brightness(0.7) contrast(1.08);
+}
+
+@media (max-width: 768px) {
+  .container-scroll {
+    height: 48rem;
+  }
+
+  .container-scroll-inner {
+    padding: 4rem 0 7rem;
+  }
+
+  .container-scroll-card {
+    height: 23rem;
+    margin-top: -2rem;
+    border-width: 3px;
+    border-radius: 22px;
+  }
+}
+
 .section-heading {
   margin-bottom: 2.5rem;
 }
@@ -342,6 +420,156 @@ p {
 .button.secondary {
   background: rgba(255,255,255,0.02);
 }
+
+.ui-button,
+.liquid-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ui-button:focus-visible,
+.liquid-button:focus-visible,
+.metal-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.liquid-button {
+  position: relative;
+  min-height: 48px;
+  overflow: hidden;
+  border: 1px solid rgba(195, 234, 255, 0.3);
+  border-radius: 14px;
+  color: var(--text);
+  background: rgba(93, 158, 193, 0.08);
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  isolation: isolate;
+  transition: transform 0.25s ease, filter 0.25s ease, border-color 0.25s ease;
+}
+
+.liquid-button:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(195, 234, 255, 0.62);
+  filter: brightness(1.12);
+}
+
+.liquid-button:active {
+  transform: translateY(0) scale(0.98);
+  filter: brightness(0.94);
+}
+
+.liquid-button-surface,
+.liquid-button-backdrop {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.liquid-button-surface {
+  z-index: 0;
+  box-shadow: 0 0 6px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.08), inset 3px 3px 0.5px -3px rgba(255,255,255,0.7), inset -3px -3px 0.5px -3px rgba(0,0,0,0.8), inset 0 0 6px 6px rgba(125,214,255,0.08), 0 0 12px rgba(255,255,255,0.12);
+}
+
+.liquid-button-backdrop {
+  z-index: -1;
+  background: rgba(19, 38, 54, 0.58);
+  backdrop-filter: url('#container-glass') blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.liquid-button-label {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.liquid-button-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.liquid-button-secondary {
+  background: rgba(255,255,255,0.04);
+}
+
+.liquid-button-outline {
+  background: transparent;
+}
+
+.liquid-button-destructive {
+  background: rgba(177, 61, 61, 0.6);
+}
+
+.liquid-button-link {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.liquid-button-default-size,
+.liquid-button-lg { padding: 0.9rem 1.4rem; }
+.liquid-button-sm { min-height: 40px; padding: 0.6rem 1rem; font-size: 0.68rem; }
+.liquid-button-xl { min-height: 56px; padding: 1rem 2rem; }
+.liquid-button-xxl { min-height: 58px; padding: 1rem 2.4rem; }
+.liquid-button-icon { width: 44px; height: 44px; padding: 0; }
+
+.portfolio-liquid-button {
+  min-width: 156px;
+}
+
+.metal-button-wrap {
+  position: relative;
+  display: inline-flex;
+  padding: 1px;
+  border-radius: 8px;
+  transform: translateY(0) scale(1);
+  transition: transform 250ms cubic-bezier(0.1, 0.4, 0.2, 1), box-shadow 250ms ease;
+}
+
+.metal-button-wrap.is-pressed {
+  transform: translateY(2px) scale(0.99);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.metal-button-wrap.is-hovered { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.metal-button-inner { position: absolute; inset: 1px; border-radius: 7px; }
+.metal-button { position: relative; z-index: 1; min-height: 44px; padding: 0.5rem 1.5rem; overflow: hidden; border: 0; border-radius: 7px; color: white; font-weight: 700; cursor: pointer; }
+.metal-button-shine { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.65), transparent); opacity: 0; transition: opacity 250ms ease; }
+.metal-button-shine.is-visible { opacity: 0.2; }
+.metal-light-text { text-shadow: 0 -1px 0 rgba(30,58,138,0.8); }
+.metal-default-outer { background: linear-gradient(#000, #a0a0a0); }
+.metal-default-inner { background: linear-gradient(#fafafa, #3e3e3e, #e5e5e5); }
+.metal-default-button { background: linear-gradient(#b9b9b9, #969696); }
+.metal-primary-outer { background: linear-gradient(#000, #a0a0a0); }
+.metal-primary-inner { background: linear-gradient(var(--accent), #354b73, #7b879b); }
+.metal-primary-button { background: linear-gradient(var(--accent), rgba(125,214,255,0.4)); }
+.metal-success-outer { background: linear-gradient(#005a43, #7ccb9b); }
+.metal-success-inner { background: linear-gradient(#e5f8f0, #00352f, #d1f0e6); }
+.metal-success-button { background: linear-gradient(#9adbc8, #3e8f7c); }
+.metal-error-outer { background: linear-gradient(#5a0000, #ffaeb0); }
+.metal-error-inner { background: linear-gradient(#ffdddd, #680002, #ffe9e9); }
+.metal-error-button { background: linear-gradient(#f08d8f, #a45253); }
+.metal-gold-outer { background: linear-gradient(#917100, #ead98f); }
+.metal-gold-inner { background: linear-gradient(#fffddd, #856807, #fff1b3); }
+.metal-gold-button { background: linear-gradient(#ffeba1, #9b873f); }
+.metal-bronze-outer { background: linear-gradient(#864813, #e9b486); }
+.metal-bronze-inner { background: linear-gradient(#edc5a1, #5f2d01, #ffdec1); }
+.metal-bronze-button { background: linear-gradient(#ffe3c9, #a36f3d); }
 
 .social-row {
   list-style: none;

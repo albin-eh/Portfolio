@@ -1,3 +1,5 @@
+import { LiquidButton } from './ui/liquid-glass-button'
+
 export default function Contact() {
   return (
     <section id="contact" className="section reveal contact-section">
@@ -12,15 +14,21 @@ export default function Contact() {
         </div>
 
         <div className="contact-actions">
-          <a className="button primary" href="https://www.linkedin.com/in/albin-rajesh-44682739b/" target="_blank" rel="noreferrer">
+          <LiquidButton asChild size="lg" className="portfolio-liquid-button">
+            <a href="https://www.linkedin.com/in/albin-rajesh-44682739b/" target="_blank" rel="noreferrer">
             LINKEDIN
-          </a>
-          <a className="button secondary" href="https://github.com" target="_blank" rel="noreferrer">
+            </a>
+          </LiquidButton>
+          <LiquidButton asChild variant="secondary" size="lg" className="portfolio-liquid-button">
+            <a href="https://github.com" target="_blank" rel="noreferrer">
             GITHUB
-          </a>
-          <a className="button secondary" href="mailto:albinedits!@gmail.com">
+            </a>
+          </LiquidButton>
+          <LiquidButton asChild variant="secondary" size="lg" className="portfolio-liquid-button">
+            <a href="mailto:albinedits!@gmail.com">
             EMAIL ME
-          </a>
+            </a>
+          </LiquidButton>
         </div>
       </div>
     </section>

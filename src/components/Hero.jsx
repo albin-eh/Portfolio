@@ -1,4 +1,5 @@
 import profileImage from '../assets/profile.jpg'
+import { LiquidButton } from './ui/liquid-glass-button'
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com' },
@@ -23,12 +24,16 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a className="button primary" href="https://www.linkedin.com/in/albin-rajesh-44682739b/" target="_blank" rel="noreferrer">
+            <LiquidButton asChild size="lg" className="portfolio-liquid-button">
+              <a href="https://www.linkedin.com/in/albin-rajesh-44682739b/" target="_blank" rel="noreferrer">
               CONNECT WITH ME
-            </a>
-            <a className="button secondary" href="#projects">
+              </a>
+            </LiquidButton>
+            <LiquidButton asChild variant="secondary" size="lg" className="portfolio-liquid-button">
+              <a href="#projects">
               VIEW MY WORK
-            </a>
+              </a>
+            </LiquidButton>
           </div>
 
           <ul className="social-row" aria-label="Social links">
