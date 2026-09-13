@@ -5,24 +5,14 @@ export const experienceData = [
     type: 'Internship',
     description:
       'Hands-on exposure to cybersecurity fundamentals, ethical hacking concepts, security tools, and practical security learning.',
-    date: '[Add internship date]',
   },
   {
     year: '2025',
     title: 'Tech Lead — E-Cell',
     type: 'Leadership',
-    organization: 'KMCT CEET',
+    organization: 'KMCT CEETM KSD',
     description:
       'Technical leadership experience involving technology, collaboration, project development, and student innovation.',
-    date: '[Add date]',
-  },
-  {
-    year: '2026',
-    title: 'IIT Bombay — [Program / Workshop / Event]',
-    type: 'Learning',
-    description:
-      'A technology-focused learning opportunity connected to IIT Bombay. Replace this placeholder with the exact program or event name.',
-    date: '[Add event date]',
   },
 ]
 

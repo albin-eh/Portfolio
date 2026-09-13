@@ -21,7 +21,6 @@ export default function Experience() {
                 <h3>{item.title}</h3>
                 {item.organization && <p className="timeline-organization">{item.organization}</p>}
                 <p>{item.description}</p>
-                <span className="timeline-date">{item.date}</span>
               </div>
             </div>
           ))}
