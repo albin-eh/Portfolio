@@ -18,7 +18,7 @@ export default function Contact() {
           <a className="button secondary" href="https://github.com" target="_blank" rel="noreferrer">
             GITHUB
           </a>
-          <a className="button secondary" href="mailto:ALBINEDITS1@GMAIL.COM">
+          <a className="button secondary" href="mailto:albinedits!@gmail.com">
             EMAIL ME
           </a>
         </div>
